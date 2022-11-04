@@ -93,13 +93,15 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-            ],[
-            InlineKeyboardButton('⚡ SUBSCᏒIBΞ ⚡', url='https://youtube.com/channel/UCqts9WhhlioK3RB9XQQzoAg'),
-            InlineKeyboardButton('🤖 UᎮDΛTΞS 🤖', url='https://t.me/sources_cods')
-            ],[
-            InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
-            InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
+
+            InlineKeyboardButton('⚡ ᗩᗪᗪ ᗰE TO YOᑌᖇ GᖇOᑌᑭ ⚡', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+        ], [
+            InlineKeyboardButton('🙋 𝐑𝐄𝐐𝐔𝐄𝐒𝐓 🙋', url='https://t.me/Metrorequestbot'),
+            InlineKeyboardButton('💠 𝐔𝐏𝐃𝐀𝐓𝐄𝐙 💠', url='https://t.me/metrohdmovies')
+        ], [
+            InlineKeyboardButton('♻️ 𝐇𝐄𝐋𝐏 ♻️', callback_data='help'),
+            InlineKeyboardButton('♻️ 𝐀𝐁𝐎𝐔𝐓 ♻️', callback_data='about')
+
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
